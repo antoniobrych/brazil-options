@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "brazil-options"
+version = "0.1.0"
+description = "Cadeia de opções da B3 com volatilidade implícita e gregas"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Antonio Brych" }]
+requires-python = ">=3.9"
+dependencies = ["numpy", "pandas>=1.3", "requests", "scipy"]
+keywords = ["b3", "opcoes", "options", "black-scholes", "gregas", "volatilidade"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Topic :: Office/Business :: Financial :: Investment",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.urls]
+Repositorio = "https://github.com/antoniobrych/brazil-options"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/brazil_options"]
